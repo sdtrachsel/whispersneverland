@@ -21,7 +21,7 @@ const LandingPage = () => {
           </p>
         </div>
         <Link to="/newentry">
-        <button className="entry-btn">Start a New Entry</button>
+        <button className="standard-btn">Start a New Entry</button>
         </Link>
       </div>
     </main>

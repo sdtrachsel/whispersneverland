@@ -10,6 +10,39 @@
   border-radius: 30px;
   padding: 2vw;
   width: 60%;
-  height: 100%;
+  height: 80%;
   background-color: rgba(255,255,255,0.7);
+}
+
+.entry-header{
+  font-family: 'Great Vibes', cursive;
+  color: #133c51;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.entry-sub-header{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1vh;
+}
+
+.title-wrapper,
+.date-wrapper{
+  margin-bottom: 1vh;
+}
+
+.descript-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+.descript-input{
+  height: 30vh;
+}
+
+.save-wrapper{
+  display: flex;
+  justify-content: center;
 }

@@ -18,3 +18,22 @@ body{
   background-position: center;
   background-attachment: fixed;
 }
+
+.standard-btn {
+  width: 20%;
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: .5em;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  background-color: #f0b72f;
+  border-radius: 5px;
+  border: #f0b72f 3px solid;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in;
+}
+
+.standard-btn:hover {
+  border-color: #133c51;
+}

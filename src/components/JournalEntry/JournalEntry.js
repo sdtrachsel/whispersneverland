@@ -8,9 +8,9 @@ const JournalEntry = () => {
   const [imageComplete, setImageComplete] = useState(false)
   return (
     <div className="entry-wrapper">
-      <div className="entry-container">
-        
-       {descriptionComplete? <EntryImage />: <EntryDescription />} 
+      <div className="entry-container">       
+       {!descriptionComplete? <EntryDescription setDescriptionComplete={setDescriptionComplete}/>:
+        <EntryImage setImageComplete={setImageComplete} />} 
       </div>
     </div>
   )
