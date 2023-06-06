@@ -10,7 +10,7 @@ const Header = () => {
       </Link>
       <nav>
         <NavLink className="nav-link" to="/journal">Journal</NavLink>
-        <NavLink className="nav-link" to="/journal">Add Entry</NavLink>
+        <NavLink className="nav-link" to="/newentry">Add Entry</NavLink>
       </nav>
     </header>
   )

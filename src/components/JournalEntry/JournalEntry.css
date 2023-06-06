@@ -1,0 +1,15 @@
+.entry-wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;   
+}
+
+.entry-container{
+  border: red 1px solid;
+  border-radius: 30px;
+  padding: 2vw;
+  width: 60%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.7);
+}
