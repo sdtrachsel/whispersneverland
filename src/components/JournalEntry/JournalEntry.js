@@ -3,9 +3,8 @@ import './JournalEntry.css'
 import EntryDescription from '../EntryDescription/EntryDescription'
 import EntryImage from '../EntryImage/EntryImage'
 
-const JournalEntry = ({setJournalEntries}) => {
+const JournalEntry = ({ journalEntries, setJournalEntries}) => {
   const [descriptionComplete, setDescriptionComplete] = useState(false)
-  // const [imageComplete, setImageComplete] = useState(false)
   const [currentEntryId, setCurrentEntryId] = useState(-1)
   
   return (
@@ -18,9 +17,9 @@ const JournalEntry = ({setJournalEntries}) => {
           setCurrentEntryId={setCurrentEntryId}
         />:
         <EntryImage 
-          setImageComplete={setImageComplete} 
           setJournalEntries={setJournalEntries}
           currentEntryId={currentEntryId}
+          journalEntries={journalEntries}
         />} 
       </div>
     </div>

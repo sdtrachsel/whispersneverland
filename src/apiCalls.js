@@ -1,0 +1,19 @@
+const getImages = (searchCriteria) => {
+   const baseURL = 'https://api.unsplash.com/search/photos?page=1&query=';
+  // const accessKey = 'GzruG8Ldx8n3qfsS9ft8aYDxnYUIjzOoamZHJc8yrXo';
+  const accessKey ='dRKh4ldgLQsMFO2zXdYtGKcCNnznqEbC9KyAkesA9gY'
+  if(!searchCriteria){
+    searchCriteria='stars'
+  }
+
+  return fetch(baseURL + searchCriteria + '&per_page=6&client_id=' + accessKey)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(res.message)
+      }
+      return res.json()
+    })
+  }
+
+
+export default getImages;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './EntryDescription.css'
 
-const EntryDescription = ({ setJournalEntries, setDescriptionComplete }) => {
+const EntryDescription = ({setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
   const [title, setTitle] = useState("")
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")

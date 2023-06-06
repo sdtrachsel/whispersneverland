@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import LandingPage from '../LandingPage/LandingPage';
 import JournalEntry from '../JournalEntry/JournalEntry'
+import EntryImage from '../EntryImage/EntryImage';
 
 const App = () => {
   const [journalEntries, setJournalEntries] = useState([])
@@ -13,7 +14,8 @@ const App = () => {
     <div className="App">
       <Header />
       <Route exact path="/" component={LandingPage} />
-      <Route exact path="/newentry" render={() => <JournalEntry setJournalEntries={setJournalEntries} />} />
+      <Route exact path="/newentry" render={() => <JournalEntry journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
+      <Route exact path="/addimage" render={() => <EntryImage />} />
     </div>
   );
 }
