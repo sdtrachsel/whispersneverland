@@ -1,5 +1,4 @@
 .card-container{
-  border: red 2px solid;
   width: 30vw;
   display: flex;
   position: relative;
@@ -32,5 +31,6 @@
   bottom: 0;
   right: 0;
   padding: 10px; 
-  color: #133c51; 
+  color: #133c51;
+  font-size: .75rem; 
 }

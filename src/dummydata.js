@@ -2,7 +2,8 @@ const data = [
   {
     id: 1686161130801,
     title: "The Super Cool Dream Factory",
-    date: "2023-06-07",
+    calendarDate: new Date("2023-06-15"),
+    displayDate: "06.15.2023",
     description: "Description for Object 1",
     image: {
       default: true,
@@ -17,8 +18,9 @@ const data = [
   },
   {
     id: 1686161130802,
-    title: "Limitless Journeys Await in dream land",
-    date: "2023-06-07",
+    title: "I went back to highschool. I didn't like it",
+    calendarDate: new Date("2023-06-07"),
+    displayDate: "06.07.2023",
     description: "Description for Object 2",
     image: {
       default: true,
@@ -33,8 +35,9 @@ const data = [
   },
   {
     id: 1686161130803,
-    title: "Object 3",
-    date: "2023-06-07",
+    title: "Paul goes on a journey",
+    calendarDate: new Date("2023-06-07"),
+    displayDate: "06.07.2023",
     description: "Description for Object 3",
     image: {
       default: true,
@@ -49,8 +52,9 @@ const data = [
   },
   {
     id: 1686161130804,
-    title: "Object 4",
-    date: "2023-06-07",
+    title: "Bats",
+    calendarDate: new Date("2023-06-04"),
+    displayDate: "06.04.2023",
     description: "Description for Object 4",
     image: {
       default: false,
@@ -65,8 +69,9 @@ const data = [
   },
   {
     id: 1686161130805,
-    title: "Object 5",
-    date: "2023-06-07",
+    title: "Eating grapes",
+    calendarDate: new Date("2023-06-01"),
+    displayDate: "06.01.2023",
     description: "Description for Object 5",
     image: {
       default: false,
@@ -81,8 +86,9 @@ const data = [
   },
   {
     id: 1686161130806,
-    title: "Object 6",
-    date: "2023-06-07",
+    title: "Cake tastes gross",
+    calendarDate: new Date("2023-05-27"),
+    displayDate: "05.27.2023",
     description: "Description for Object 6",
     image: {
       default: false,
@@ -97,8 +103,9 @@ const data = [
   },
   {
     id: 1686161130807,
-    title: "Object 7",
-    date: "2023-06-07",
+    title: "Look at me fly",
+    calendarDate: new Date("2023-05-21"),
+    displayDate: "05.21.2023",
     description: "Description for Object 7",
     image: {
       default: false,
@@ -113,8 +120,9 @@ const data = [
   },
   {
     id: 1686161130808,
-    title: "Object 8",
-    date: "2023-06-07",
+    title: "Polar Bears Ice Skating",
+    calendarDate: new Date("2023-05-15"),
+    displayDate: "05.15.2023",
     description: "Description for Object 8",
     image: {
       default: false,
@@ -129,8 +137,9 @@ const data = [
   },
   {
     id: 1686161130809,
-    title: "Object 9",
-    date: "2023-06-07",
+    title: "Aliens",
+    calendarDate: new Date("2023-05-04"),
+    displayDate: "05.04.2023",
     description: "Description for Object 9",
     image: {
       default: false,
@@ -145,8 +154,9 @@ const data = [
   },
   {
     id: 1686161130810,
-    title: "Object 10",
-    date: "2023-06-07",
+    title: "Don't Eat Beets for Dinner",
+    calendarDate: new Date("2023-05-01"),
+    displayDate: "05.01.2023",
     description: "Description for Object 10",
     image: {
       default: false,

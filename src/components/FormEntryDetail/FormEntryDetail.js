@@ -6,11 +6,18 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
 
+  const formattedDate = () => {
+     const [year, month, day] = date.split("-");
+    return `${month}.${day}.${year}`;
+  }
+
   const createJournalEntry = () => {
+    
     let newEntry = {
       id: Date.now(),
       title: title,
-      date: date,
+      calendarDate: new Date(date),
+      displayDate: formattedDate(),
       description: description,
       image: {
         default: true,
@@ -30,7 +37,10 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
   const handleSave = (event) => {
     event.preventDefault()
     let newEntry = createJournalEntry()
-    setJournalEntries((prevEntries) => [...prevEntries, newEntry])
+    setJournalEntries((prevEntries) => {
+      let updatedEntries = [...prevEntries, newEntry]
+      return updatedEntries.sort((a, b) => b.calendarDate - a.calendarDate)
+    })
     setCurrentEntryId(newEntry.id)
     setTitle("")
     setDate("")

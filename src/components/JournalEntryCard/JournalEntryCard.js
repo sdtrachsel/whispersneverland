@@ -19,16 +19,11 @@ const JournalEntryCard = ({ entry }) => {
     return entry.title
   }
 
-  const entryDate = () => {
-    let datePieces = entry.date.split('-')
-    return datePieces[1] + '.' + datePieces[2] + '.' + datePieces[0]
-  }
-
-  return (
+   return (
     <div className="card-container">
       <img className="card-img" src={imageSource()} alt={entry.image.urls.altText} />
       <div className="overlay-title">{entryTitle()}</div>
-      <div className="overlay-date">{entryDate()}</div>
+      <div className="overlay-date">{entry.displayDate}</div>
     </div>
   )
 }
