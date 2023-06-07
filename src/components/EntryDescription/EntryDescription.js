@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './EntryDescription.css'
 
-const EntryDescription = ({setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
+const EntryDescription = ({ setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
   const [title, setTitle] = useState("")
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
@@ -14,8 +14,12 @@ const EntryDescription = ({setCurrentEntryId, setJournalEntries, setDescriptionC
       description: description,
       image: {
         default: true,
-        imgUrl: '',
-        altText: ''
+        urls: {
+          altText: 'Whisper From Neverland default journal image',
+          regular: 'https://i.imgur.com/6b9hrSL.png',
+          small: 'https://i.imgur.com/6b9hrSL.png',
+          thumb: 'https://i.imgur.com/6b9hrSL.png'
+        },
       }
     }
 
