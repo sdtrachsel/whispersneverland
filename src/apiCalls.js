@@ -9,6 +9,7 @@ const getImages = (searchCriteria) => {
   return fetch(baseURL + searchCriteria + '&per_page=6&orientation=squarish&client_id=' + accessKey)
     .then((res) => {
       if (!res.ok) {
+        console.log(res.message)
         throw new Error(res.message)
       }
       return res.json()

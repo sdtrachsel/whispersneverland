@@ -13,14 +13,14 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
 
   const addImageToJournalEntry = () => {
     const updatedJournalEntries = journalEntries.map((entry) => {
-      if(entry.id === currentEntryId){
-        const updatedEntry = {...entry}
+      if (entry.id === currentEntryId) {
+        const updatedEntry = { ...entry }
         updatedEntry.image.default = false
         updatedEntry.image.urls.regular = selectedImage.urls.regular;
-        updatedEntry.image.urls.small= selectedImage.urls.small;
-        updatedEntry.image.urls.thumb= selectedImage.urls.thumb;
-        updatedEntry.image.urls.raw= selectedImage.urls.raw;
-        updatedEntry.image.altText=selectedImage.alt_description;
+        updatedEntry.image.urls.small = selectedImage.urls.small;
+        updatedEntry.image.urls.thumb = selectedImage.urls.thumb;
+        updatedEntry.image.urls.raw = selectedImage.urls.raw;
+        updatedEntry.image.altText = selectedImage.alt_description;
 
         return updatedEntry
       }
@@ -31,14 +31,17 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
 
   const getSearchImages = (event) => {
     event.preventDefault()
+    setSelectedImageIndex(-1)
     getImages(searchValue)
       .then(data => {
+        if (data.results.length < 1) {
+          throw new Error('No images found')
+        }
         setSearchResults(data.results)
         setError(null)
       })
       .catch(err => {
-        setError('Failed to fetch images.');
-        console.log(err)
+        setError(err.message);
       })
   }
 
@@ -62,7 +65,7 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
       <label key={index + 1}>
         <input
           type="radio"
-          name="image-one"
+          name={"image " + (index + 1)}
           value={result}
           checked={selectedImageIndex === index}
           onChange={() => selectImage(result, index)} />
@@ -88,8 +91,8 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
             placeholder="Search for image....."
             value={searchValue}
             onChange={(event) => setSearchValue(event.target.value)} />
+          <button onClick={(event) => getSearchImages(event)} disabled={!searchValue}>Search</button>
         </div>
-        <button onClick={(event)=>getSearchImages(event)} disabled={!searchValue}>Search</button>
         <div>
           {formSubmitted && <Redirect to="/journal" />}
           {error && <p>{error}</p>}
