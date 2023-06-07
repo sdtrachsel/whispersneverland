@@ -16,9 +16,10 @@ const EntryDescription = ({ setCurrentEntryId, setJournalEntries, setDescription
         default: true,
         urls: {
           altText: 'Whisper From Neverland default journal image',
-          regular: 'https://i.imgur.com/6b9hrSL.png',
-          small: 'https://i.imgur.com/6b9hrSL.png',
-          thumb: 'https://i.imgur.com/6b9hrSL.png'
+          regular: "",
+          small: "",
+          thumb: "",
+          raw:""
         },
       }
     }

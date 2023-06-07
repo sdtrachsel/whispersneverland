@@ -6,7 +6,7 @@ const getImages = (searchCriteria) => {
   
   if(!searchCriteria) throw new Error ("No search criteria provided")
 
-  return fetch(baseURL + searchCriteria + '&per_page=6&client_id=' + accessKey)
+  return fetch(baseURL + searchCriteria + '&per_page=6&orientation=squarish&client_id=' + accessKey)
     .then((res) => {
       if (!res.ok) {
         throw new Error(res.message)
