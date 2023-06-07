@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
-import './JournalEntry.css'
-import EntryDescription from '../EntryDescription/EntryDescription'
-import EntryImage from '../EntryImage/EntryImage'
+import React, { useState } from 'react'
+import './FormJournalEntry.css'
+import FormEntryDetail from '../FormEntryDetail/FormEntryDetail'
+import FormEntryImage from '../FormEntryImage/FormEntryImage'
 
-const JournalEntry = ({ journalEntries, setJournalEntries}) => {
+const FormJournalEntry = ({ journalEntries, setJournalEntries}) => {
   const [descriptionComplete, setDescriptionComplete] = useState(false)
   const [currentEntryId, setCurrentEntryId] = useState(-1)
   
@@ -11,12 +11,12 @@ const JournalEntry = ({ journalEntries, setJournalEntries}) => {
     <div className="entry-wrapper">
       <div className="entry-container">       
        {!descriptionComplete? 
-        <EntryDescription 
+        <FormEntryDetail
           setDescriptionComplete={setDescriptionComplete} 
           setJournalEntries={setJournalEntries}
           setCurrentEntryId={setCurrentEntryId}
         />:
-        <EntryImage 
+        <FormEntryImage 
           setJournalEntries={setJournalEntries}
           currentEntryId={currentEntryId}
           journalEntries={journalEntries}
@@ -26,4 +26,4 @@ const JournalEntry = ({ journalEntries, setJournalEntries}) => {
   )
 }
 
-export default JournalEntry;
+export default FormJournalEntry;

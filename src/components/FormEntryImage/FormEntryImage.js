@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom';
 import getImages from '../../apiCalls';
-import './EntryImage.css'
+import './FormEntryImage.css'
 
-const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
+const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
   const [searchValue, setSearchValue] = useState("")
   const [selectedImage, setSelectedImage] = useState({})
   const [selectedImageIndex, setSelectedImageIndex] = useState(-1)
@@ -20,7 +20,7 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
         updatedEntry.image.urls.small = selectedImage.urls.small;
         updatedEntry.image.urls.thumb = selectedImage.urls.thumb;
         updatedEntry.image.urls.raw = selectedImage.urls.raw;
-        updatedEntry.image.altText = selectedImage.alt_description;
+        updatedEntry.image.url.altText = selectedImage.alt_description;
 
         return updatedEntry
       }
@@ -104,4 +104,4 @@ const EntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
   )
 }
 
-export default EntryImage;
+export default FormEntryImage;

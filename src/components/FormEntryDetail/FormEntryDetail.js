@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './EntryDescription.css'
+import './FormEntryDetail.css'
 
-const EntryDescription = ({ setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
+const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
   const [title, setTitle] = useState("")
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
@@ -15,7 +15,7 @@ const EntryDescription = ({ setCurrentEntryId, setJournalEntries, setDescription
       image: {
         default: true,
         urls: {
-          altText: 'Whisper From Neverland default journal image',
+          altText: 'Whispers From Neverland with moon',
           regular: "",
           small: "",
           thumb: "",
@@ -71,4 +71,4 @@ const EntryDescription = ({ setCurrentEntryId, setJournalEntries, setDescription
   )
 }
 
-export default EntryDescription;
+export default FormEntryDetail;
