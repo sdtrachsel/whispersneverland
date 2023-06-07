@@ -11,11 +11,9 @@ const JournalEntryCard = ({ entry }) => {
   }
 
   const entryTitle = () => {
-    console.log('entry', entry.title, entry.title.length)
     if (entry.title.length > 28) {
       return entry.title.slice(0, 25) + "..."
     }
-
     return entry.title
   }
 
