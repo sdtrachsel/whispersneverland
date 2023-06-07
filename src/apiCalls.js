@@ -1,8 +1,7 @@
 const getImages = (searchCriteria) => {
    const baseURL = 'https://api.unsplash.com/search/photos?page=1&query=';
-  // const accessKey = 'GzruG8Ldx8n3qfsS9ft8aYDxnYUIjzOoamZHJc8yrXo';
-  const accessKey ='dRKh4ldgLQsMFO2zXdYtGKcCNnznqEbC9KyAkesA9gY'
 
+  const accessKey = process.env.REACT_APP_API_KEY
   
   if(!searchCriteria) throw new Error ("No search criteria provided")
 
