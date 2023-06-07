@@ -1,0 +1,83 @@
+main {
+  height: 87vh;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-wrapper {
+  height: 100%;
+  width: 80%;
+  opacity: .85;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url('../../assets/moon-background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.welcome-wrapper {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-header {
+  margin-left: 4.5%;
+  width: 50%;
+  align-self: center;
+  font-weight: 400;
+}
+
+.welcome-sub-header {
+  width: 35%;
+  margin: -3% 0 0 44.4%;
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  color: #133c51;
+  opacity: 1;
+}
+
+.greeting-wrapper {
+  width: 52%;
+  margin-top: -3%;
+  align-self: center;
+}
+
+.greeting-top,
+.greeting-bottom {
+  font-size: .75rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.greeting-top {
+  margin-bottom: 1rem;
+}
+
+.greeting-bottom {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.entry-btn {
+  width: 20%;
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: .5em;
+  align-self: center;
+  color: white;
+  font-weight: bold;
+  background-color: #f0b72f;
+  border-radius: 5px;
+  border: #f0b72f 3px solid;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in;
+}
+
+.entry-btn:hover {
+  border-color: #133c51;
+}
