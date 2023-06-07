@@ -1,0 +1,36 @@
+.card-container{
+  border: red 2px solid;
+  width: 30vw;
+  display: flex;
+  position: relative;
+  background-color: white;
+}
+
+.card-img{
+  width: 60%;
+  flex-shrink: 0;
+  opacity: .35;
+ }
+
+.overlay-title {
+  position: absolute;
+  width: 60%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: #133c51;
+  font-size: 1rem;
+  font-weight: 600;
+  left: 30%;
+  top: 20%;
+  text-align: right;
+}
+
+.overlay-date{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px; 
+  color: #133c51; 
+}

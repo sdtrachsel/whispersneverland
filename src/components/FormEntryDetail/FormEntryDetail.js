@@ -15,11 +15,11 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
       image: {
         default: true,
         urls: {
-          altText: 'Whispers From Neverland with moon',
+          altText: "Whispers From Neverland with moon",
           regular: "https://i.imgur.com/6b9hrSL.png",
           small: "",
           thumb: "",
-          raw:""
+          raw: ""
         },
       }
     }
@@ -42,29 +42,36 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
     <section className="entry-descrip-wrapper">
       <h1 className="entry-header">New Journal Entry</h1>
       <form onSubmit={(event) => handleSave(event)}>
-        <h2 className='entry-sub-header'>Dream Details</h2>
-        <div className='title-wrapper'>
-          <label>Dream Title:</label>
-          <input type="text"
+        <h2 className="entry-sub-header">Dream Details</h2>
+        <div className="title-wrapper">
+          <label htmlFor="title-input">Dream Title:</label>
+          <input
+            id="title-input"
+            type="text"
             value={title}
             onChange={(event) => setTitle(event.target.value)} />
         </div>
         <div className="date-wrapper">
-          <label>Date:</label>
-          <input type="date"
+          <label htmlFor="date-input">Date:</label>
+          <input
+            id="date-input"
+            type="date"
             value={date}
             onChange={(event) => setDate(event.target.value)} />
         </div>
         <div className="descript-wrapper">
-          <label>Description:</label>
-          <textarea className="descript-input"
+          <label htmlFor="desciption-input">Description:</label>
+          <textarea
+            id="description-input"
+            className="descript-input"
             value={description}
             onChange={(event) => setDescription(event.target.value)} />
         </div>
         <div className="save-wrapper">
-          <input className="standard-btn"
+          <input
+            className="standard-btn"
             type="submit"
-            value={'Save'} />
+            value={"Save"} />
         </div>
       </form>
     </section>
