@@ -5,14 +5,18 @@ import getImages from '../../apiCalls';
 const ImageSearch = ({ searchValue, setSearchValue, selectedImageIndex, setSelectedImage, setSelectedImageIndex, addImageToJournalEntry }) => {
   const [searchResults, setSearchResults] = useState([])
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [error, setError] = useState(null)
 
-  const getSearchImages = () => {
+  const getSearchImages = (event) => {
+    event.preventDefault()
     getImages(searchValue)
       .then(data => {
         console.log(data.results)
         setSearchResults(data.results)
+        setError(null)
       })
       .catch(err => {
+        setError('Failed to fetch images.');
         console.log(err)
       })
   }
@@ -51,13 +55,12 @@ const ImageSearch = ({ searchValue, setSearchValue, selectedImageIndex, setSelec
     )
   })
 
-  useEffect(() => {
-    getSearchImages()
-  }, [searchValue])
 
   return (
     <div>
       {formSubmitted && <Redirect to="/journal" />}
+      {error && <p>{error}</p>}
+      <button onClick={(event)=>getSearchImages(event)} disabled={!searchValue}>Search</button>
       {resultImages}
       <button onClick={(event) => { handleSave(event) }}>Save</button>
     </div>
