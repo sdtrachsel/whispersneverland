@@ -16,7 +16,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
         default: true,
         urls: {
           altText: 'Whispers From Neverland with moon',
-          regular: "",
+          regular: "https://i.imgur.com/6b9hrSL.png",
           small: "",
           thumb: "",
           raw:""
