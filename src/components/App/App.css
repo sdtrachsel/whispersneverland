@@ -2,6 +2,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  overflow-x: hidden;
 }
 
 body,
@@ -35,5 +37,5 @@ body{
 }
 
 .standard-btn:hover {
-  border-color: #133c51;
+  border-color: rgba(19, 60, 81, 0.85);
 }

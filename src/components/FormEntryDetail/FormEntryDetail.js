@@ -55,15 +55,18 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
 
   return (
     <section className="entry-descrip-wrapper">
-      <h1 className="entry-header">New Journal Entry</h1>
+      <h1 className="entry-header">Journal Entry</h1>
       <form onSubmit={(event) => handleSave(event)}>
         <h2 className="entry-sub-header">Dream Details</h2>
         <div className="title-wrapper">
           <label htmlFor="title-input">Dream Title:</label>
           <input
+            className="title-input"
             id="title-input"
             type="text"
             value={title}
+            size={50}
+            maxLength={50}
             onChange={(event) => setTitle(event.target.value)} />
         </div>
         <div className="date-wrapper">
