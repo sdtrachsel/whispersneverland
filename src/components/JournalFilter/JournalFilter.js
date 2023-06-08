@@ -24,7 +24,7 @@ const JournalFilter = ({journalEntries, setFilteredEntries, setIsFiltered}) => {
 
   return (
     <div className="filter-wrapper">
-      <form onSubmit={(event) => applyFilter(event)}>
+      <form className="image-form" onSubmit={(event) => applyFilter(event)}>
         <label htmlFor="date-filter">Find by date:</label>
         <input 
           id="date-filter" 
@@ -32,8 +32,8 @@ const JournalFilter = ({journalEntries, setFilteredEntries, setIsFiltered}) => {
           value={selectedDate}
           onChange={handleDateChange}
         />
-        <input type="submit" value={"Apply"} />
-        <button type="button" onClick={clearFilter}>Clear </button>
+        <input className="filter-btn" type="submit" value={"Apply"} disabled={!selectedDate}/>
+        <button className="clear-btn" type="button" onClick={clearFilter}>Clear </button>
       </form>
     </div>
   )

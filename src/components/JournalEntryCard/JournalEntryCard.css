@@ -1,5 +1,9 @@
-.card-container{
+.card-link{
   width: 30vw;
+}
+
+.card-container{
+  width: 100%;
   display: flex;
   position: relative;
   background-color: white;
@@ -33,4 +37,24 @@
   padding: 10px; 
   color: #133c51;
   font-size: .75rem; 
+}
+
+@media screen and (max-width: 40em) {
+  .card-link{
+    width: 45vw;
+  }
+
+  .overlay-title{
+    font-size: .75rem;
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .card-link{
+    width: 70vw;
+  }
+
+  .overlay-title{
+    font-size: .75rem;
+  }
 }

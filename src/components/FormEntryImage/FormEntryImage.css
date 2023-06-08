@@ -28,7 +28,6 @@
 
 .result-image{
   height:120px;
-  
 }
 
 .img-save-btn{
@@ -83,13 +82,7 @@ input[type=radio]:checked + .result-image {
 
 @media screen and (max-width: 40em) {
   .result-wrapper{
-    /* border: white solid 1px;
-    height: 75%;
-    display: grid; */
     grid-template-columns: repeat(2, 1fr);
-    /* grid-auto-rows: auto;
-    align-items: center;
-    justify-items: center; */
     gap: 1vh;
   }
 

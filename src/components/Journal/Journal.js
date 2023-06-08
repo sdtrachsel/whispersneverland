@@ -17,10 +17,12 @@ const Journal = ({ journalEntries }) => {
 
   return (
     <section>
+      <div className="filter-container"> 
       <JournalFilter
         journalEntries={journalEntries}
         setIsFiltered={setIsFiltered}
         setFilteredEntries={setFilteredEntries} />
+       </div> 
       <div className="journal-cards">
         {isFiltered ?
           createEntryCards(filteredEntries) :
