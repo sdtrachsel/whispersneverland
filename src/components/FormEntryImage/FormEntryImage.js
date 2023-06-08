@@ -20,7 +20,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
         updatedEntry.image.urls.small = selectedImage.urls.small;
         updatedEntry.image.urls.thumb = selectedImage.urls.thumb;
         updatedEntry.image.urls.raw = selectedImage.urls.raw;
-        updatedEntry.image.url.altText = selectedImage.alt_description;
+        updatedEntry.image.urls.altText = selectedImage.alt_description;
 
         return updatedEntry
       }
@@ -98,7 +98,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
           {formSubmitted && <Redirect to="/journal" />}
           {error && <p>{error}</p>}
           {resultImages}
-          <button onClick={(event) => { handleSave(event) }}>Save</button>
+          <button onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
         </div>
       </form>
     </div>

@@ -8,7 +8,11 @@ const Journal = ({ journalEntries }) => {
   const [filteredEntries, setFilteredEntries] = useState([])
 
   const createEntryCards = (entries) => {
-    return entries.map(entry =>  <JournalEntryCard key={entry.id} entry={entry} />)
+    if (entries.length > 0) {
+      return entries.map(entry => <JournalEntryCard key={entry.id} entry={entry} />)
+    }
+
+    return <p>No Entries Found</p>
   }
 
   return (
