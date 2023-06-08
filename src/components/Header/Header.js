@@ -9,8 +9,8 @@ const Header = () => {
         <div className="logo">Logo here</div>
       </Link>
       <nav>
-        <NavLink className="nav-link" to="/journal">Journal</NavLink>
-        <NavLink className="nav-link" to="/newentry">Add Entry</NavLink>
+        <NavLink  to="/journal" className={isActive => "nav-link" + (!isActive? ' unselected': "")}>Journal</NavLink>
+        <NavLink  to="/newentry" className={isActive => "nav-link" + (!isActive? ' unselected': "")}>Add Entry</NavLink>
       </nav>
     </header>
   )
