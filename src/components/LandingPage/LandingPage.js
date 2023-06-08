@@ -20,7 +20,7 @@ const LandingPage = () => {
             Dream on, adventurer!
           </p>
         </div>
-        <Link to="/newentry">
+        <Link className="new-entry-btn-wrapper" to="/newentry">
         <button className="standard-btn">Start a New Entry</button>
         </Link>
       </div>

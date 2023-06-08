@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import './Journal.css'
+import JournalFilter from "../JournalFilter/JournalFilter";
+import JournalEntryCard from "../JournalEntryCard/JournalEntryCard";
 
-const Journal = () => {
+const Journal = ({ journalEntries }) => {
+  const [isFiltered, setIsFiltered] = useState(false)
+  const [filteredEntries, setFilteredEntries] = useState([])
 
-  return(
-    <div>Journal HOLDER</div>
+  const createEntryCards = (entries) => {
+    return entries.map(entry =>  <JournalEntryCard key={entry.id} entry={entry} />)
+  }
+
+  return (
+    <section>
+      <JournalFilter
+        journalEntries={journalEntries}
+        setIsFiltered={setIsFiltered}
+        setFilteredEntries={setFilteredEntries} />
+      <div className="journal-cards">
+        {isFiltered ?
+          createEntryCards(filteredEntries) :
+          createEntryCards(journalEntries)}
+      </div>
+    </section>
   )
 }
 

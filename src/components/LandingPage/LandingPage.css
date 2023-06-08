@@ -62,3 +62,9 @@ main {
   font-weight: 600;
   margin-bottom: .5rem;
 }
+
+.new-entry-btn-wrapper{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}

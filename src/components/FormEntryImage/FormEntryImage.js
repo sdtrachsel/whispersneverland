@@ -72,7 +72,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
         <img
           className="result-image"
           key={result.id}
-          src={result.urls.raw + '&h=550&dpr=2'}
+          src={result.urls.raw + "&h=550&dpr=2"}
           alt={result.alt_description} />
       </label>
     )
@@ -82,13 +82,14 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
     <div className="img-entry-wrapper">
       <h1 className="img-entry-header">Select your Image</h1>
       <form >
-        <h2 className='img-entry-sub-header'>Dream Details</h2>
-        <div className='search-wrapper'>
-          <label htmlFor='search'> Search: </label>
+        <h2 className="img-entry-sub-header">Dream Details</h2>
+        <div className="search-wrapper">
+          <label htmlFor="search"> Search: </label>
           <input
-            id='search'
+            id="search"
             type="search"
-            placeholder="Search for image....."
+            name="search"
+            placeholder="Search for images....."
             value={searchValue}
             onChange={(event) => setSearchValue(event.target.value)} />
           <button onClick={(event) => getSearchImages(event)} disabled={!searchValue}>Search</button>
