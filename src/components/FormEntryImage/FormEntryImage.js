@@ -98,7 +98,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
           {formSubmitted && <Redirect to="/journal" />}
           {error && <p>{error}</p>}
           {resultImages}
-          <button onClick={(event) => { handleSave(event) }}>Save</button>
+          <button onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
         </div>
       </form>
     </div>

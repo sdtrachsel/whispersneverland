@@ -11,6 +11,8 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
     return `${month}.${day}.${year}`;
   }
 
+  const entryComplete = title && date && description
+
   const createJournalEntry = () => {
     
     let newEntry = {
@@ -81,6 +83,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
           <input
             className="standard-btn"
             type="submit"
+            disabled={!(title && date && description)}
             value={"Save"} />
         </div>
       </form>
