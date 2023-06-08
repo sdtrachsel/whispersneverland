@@ -1,8 +1,3 @@
-const calendarDate = (date) => {
-  const [year, month, day] = date.split('-');
-  return new Date(Date.UTC(year, month - 1, day))
-}
-
 const data = [
   {
     id: 1686161130801,

@@ -1,70 +1,77 @@
 main {
   height: 87vh;
-  width: 99%;
+  width: 99VW;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .landing-wrapper {
-  height: 100%;
-  width: 80%;
-  opacity: .85;
+  height: 90%;
+  width: 65%;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url('../../assets/moon-background.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgba(19, 60, 81, 0.85);
 }
 
 .welcome-wrapper {
-  margin-top: 7%;
   display: flex;
   flex-direction: column;
+   align-items: center;
+  justify-content: center;
 }
 
-.welcome-header {
-  margin-left: 4.5%;
-  width: 50%;
-  align-self: center;
-  font-weight: 400;
+.welcome {
+  margin-left: 1.8em;
+  font-size: 2em;
+  font-weight: 600;
 }
 
-.welcome-sub-header {
-  width: 35%;
-  margin: -3% 0 0 44.4%;
+.dreamer {
+  width: 80%;
+  margin-top: -4vh;
+  text-align: center;
+  color:#f0b72f;
   font-family: 'Great Vibes', cursive;
   font-size: 5rem;
-  color: #133c51;
-  opacity: 1;
 }
 
 .greeting-wrapper {
-  width: 52%;
-  margin-top: -3%;
+  color: rgba(255, 255, 255, 0.85);
+  width: 90%;
+  margin: 1vh 0;
   align-self: center;
 }
 
-.greeting-top,
+.greeting-par{
+  font-size: .75rem;
+  line-height: 1.2rem;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+
 .greeting-bottom {
   font-size: .75rem;
   line-height: 1.2rem;
   text-align: center;
-}
-
-.greeting-top {
-  margin-bottom: 1rem;
-}
-
-.greeting-bottom {
-  font-weight: 600;
-  margin-bottom: .5rem;
+  margin: 2vh 0;
+  font-weight: 400;
+  font-size: .75rem;
 }
 
 .new-entry-btn-wrapper{
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+@media screen and (max-width: 27em) {
+  .welcome {
+    font-size: 1.5rem;
+  }
+  
+  .dreamer {
+    font-size: 4rem;
+  }
 }

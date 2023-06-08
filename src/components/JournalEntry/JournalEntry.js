@@ -18,20 +18,16 @@ const JournalEntry = ({ entryId, journalEntries }) => {
   };
 
   if (redirectToForm) {
-    return <Redirect to={{ 
-      pathname: "/newentry", 
-      state: { 
+    return <Redirect to={{
+      pathname: "/newentry",
+      state: {
         currentEntryId: selectedEntry.id,
         descriptionComplete: true,
-       } 
-      }} />
+      }
+    }} />
   }
 
   const renderContent = () => {
-    // if (!selectedEntry) {
-    //   return <p>loading</p>
-    // }
-
     return (
       <>
         <img src={imageSrc()} alt={selectedEntry.image.urls.altText} />

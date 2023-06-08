@@ -1,4 +1,5 @@
 header {
+  border: red 1px solid;
   display: flex;
   justify-content: space-between;
   height: 13vh;
