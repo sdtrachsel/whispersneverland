@@ -80,9 +80,8 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
 
   return (
     <div className="img-entry-wrapper">
-      <h1 className="img-entry-header">Select your Image</h1>
-      <form >
-        <h2 className="img-entry-sub-header">Dream Details</h2>
+      <h1 className="entry-header">Select your Image</h1>
+      <form className="search-form">
         <div className="search-wrapper">
           <label htmlFor="search"> Search: </label>
           <input
@@ -92,14 +91,14 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
             placeholder="Search for images....."
             value={searchValue}
             onChange={(event) => setSearchValue(event.target.value)} />
-          <button onClick={(event) => getSearchImages(event)} disabled={!searchValue}>Search</button>
+          <button className="search-btn" onClick={(event) => getSearchImages(event)} disabled={!searchValue}>Search</button>
         </div>
-        <div>
+        <div className="result-wrapper">
           {formSubmitted && <Redirect to="/journal" />}
           {error && <p>{error}</p>}
           {resultImages}
-          <button onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
         </div>
+          <button className="standard-btn img-save-btn" onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
       </form>
     </div>
   )

@@ -27,10 +27,9 @@ body{
   min-height: fit-content;
   padding: .5em;
   align-self: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: bold;
   background-color: #f0b72f;
-  border-radius: 5px;
   border: #f0b72f 3px solid;
   cursor: pointer;
   transition: border-color 0.3s ease-in;
@@ -38,4 +37,10 @@ body{
 
 .standard-btn:hover {
   border-color: rgba(19, 60, 81, 0.85);
+}
+
+.standard-btn:disabled {
+  background-color: rgba(151, 150, 150, 0.75);
+  border: rgba(151, 150, 150, 0.75) 3px solid;
+  cursor:default;
 }
