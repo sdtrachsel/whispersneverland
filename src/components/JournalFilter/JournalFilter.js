@@ -11,10 +11,8 @@ const JournalFilter = ({journalEntries, setFilteredEntries, setIsFiltered}) => {
   const applyFilter = (event) => {
     event.preventDefault()
     const selectedFormatted = new Date(selectedDate).toISOString().split('T')[0];
-
     const narrowedEntries = journalEntries.filter(entry => entry.calendarDate === selectedFormatted)
-  
-    
+      
     setFilteredEntries(narrowedEntries)
     setIsFiltered(true)
   }
