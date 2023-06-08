@@ -7,18 +7,23 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
   const [description, setDescription] = useState("")
 
   const formattedDate = () => {
-     const [year, month, day] = date.split("-");
+    const [year, month, day] = date.split("-");
     return `${month}.${day}.${year}`;
+  }
+
+  const calendarDate = () => {
+    const [year, month, day] = date.split('-');
+    return new Date(Date.UTC(year, month - 1, day))
   }
 
   const entryComplete = title && date && description
 
   const createJournalEntry = () => {
-    
+
     let newEntry = {
       id: Date.now(),
       title: title,
-      calendarDate: new Date(date),
+      calendarDate: date,
       displayDate: formattedDate(),
       description: description,
       image: {
