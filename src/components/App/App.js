@@ -4,18 +4,14 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import LandingPage from '../LandingPage/LandingPage';
 import FormJournalEntry from '../FormJournalEntry/FormJournalEntry'
-import EntryImage from '../FormEntryImage/FormEntryImage';
+// import EntryImage from '../FormEntryImage/FormEntryImage';
 import Journal from '../Journal/Journal';
 import data from '../../dummydata';
 import JournalEntry from './JournalEntry/JournalEntry';
 
 
 const App = () => {
-  const [journalEntries, setJournalEntries] = useState([])
-
-  useEffect(() => {
-    setJournalEntries(data);
-  }, []);
+  const [journalEntries, setJournalEntries] = useState(data)
 
   return (
     <div className="App">
