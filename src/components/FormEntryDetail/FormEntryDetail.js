@@ -16,8 +16,6 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
     return new Date(Date.UTC(year, month - 1, day))
   }
 
-  const entryComplete = title && date && description
-
   const createJournalEntry = () => {
 
     let newEntry = {

@@ -28,9 +28,9 @@ const JournalEntry = ({ entryId, journalEntries }) => {
   }
 
   const renderContent = () => {
-    if (!selectedEntry) {
-      return <p>loading</p>
-    }
+    // if (!selectedEntry) {
+    //   return <p>loading</p>
+    // }
 
     return (
       <>
