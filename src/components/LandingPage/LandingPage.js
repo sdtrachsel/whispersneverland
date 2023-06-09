@@ -21,8 +21,8 @@ const LandingPage = () => {
             Let's sail through these stars of self-discovery.
           </p>
         </div>
-        <Link className="new-entry-btn-wrapper" to="/newentry">
-          <button className="standard-btn">Start a New Entry</button>
+        <Link data-cy="link-newentry-btn" className="new-entry-btn-wrapper" to="/newentry">
+          <button data-cy="newentry-btn"className="standard-btn">Start a New Entry</button>
         </Link>
       </div>
     </main >
