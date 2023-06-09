@@ -38,6 +38,9 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
 
   const handleSave = (event) => {
     event.preventDefault()
+    setTitleError(false);
+    setDateError(false);
+    setDescriptionError(false);
 
     if (!title) setTitleError(true);
     if (!date) setDateError(true);
