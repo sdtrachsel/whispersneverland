@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import getImages from '../../apiCalls';
-import './FormEntryImage.css'
+import './FormEntryImage.css';
+import PropTypes from 'prop-types';
 
 const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) => {
   const [searchValue, setSearchValue] = useState("")
@@ -26,19 +27,19 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
       }
       return entry;
     })
-    setJournalEntries(updatedJournalEntries)
+    setJournalEntries(updatedJournalEntries);
   }
 
   const getSearchImages = (event) => {
-    event.preventDefault()
-    setSelectedImageIndex(-1)
+    event.preventDefault();
+    setSelectedImageIndex(-1);
     getImages(searchValue)
       .then(data => {
         if (data.results.length < 1) {
           throw new Error('No images found')
         }
-        setSearchResults(data.results)
-        setError(null)
+        setSearchResults(data.results);
+        setError(null);
       })
       .catch(err => {
         setError(err.message);
@@ -46,18 +47,18 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
   }
 
   const selectImage = (image, index) => {
-    setSelectedImage(image)
-    setSelectedImageIndex(index)
+    setSelectedImage(image);
+    setSelectedImageIndex(index);
   }
 
   const handleSave = (event) => {
-    event.preventDefault()
-    addImageToJournalEntry()
-    setSearchValue("")
-    setSearchResults([])
-    setSelectedImage({})
-    setSelectedImageIndex(-1)
-    setFormSubmitted(true)
+    event.preventDefault();
+    addImageToJournalEntry();
+    setSearchValue("");
+    setSearchResults([]);
+    setSelectedImage({});
+    setSelectedImageIndex(-1);
+    setFormSubmitted(true);
   }
 
   const resultImages = searchResults.map((result, index) => {
@@ -98,10 +99,16 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
           {error && <p>{error}</p>}
           {resultImages}
         </div>
-          <button className="standard-btn img-save-btn" onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
+        <button className="standard-btn img-save-btn" onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
       </form>
     </section>
   )
 }
+
+FormEntryImage.propTypes = {
+  currentEntryId: PropTypes.number.isRequired,
+  journalEntries: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setJournalEntries: PropTypes.func.isRequired
+};
 
 export default FormEntryImage;

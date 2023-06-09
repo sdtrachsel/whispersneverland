@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import "./App.css";
 import { Route, Switch, useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import LandingPage from '../LandingPage/LandingPage';
-import FormJournalEntry from '../FormJournalEntry/FormJournalEntry'
+import FormJournalEntry from '../FormJournalEntry/FormJournalEntry';
 import Journal from '../Journal/Journal';
 import JournalEntry from '../JournalEntry/JournalEntry';
 import Error from '../Error/Error';
 
-import data from '../../dummydata'
-
 const App = () => {
   const [journalEntries, setJournalEntries] = useState([])
+
   const location = useLocation();
   const currentEntryId = location.state?.currentEntryId;
 
@@ -21,7 +20,6 @@ const App = () => {
     if (selectedEntry) {
       return <JournalEntry entryId={entryId} journalEntries={journalEntries} />
     }
-
     return <Error />;
   };
 
