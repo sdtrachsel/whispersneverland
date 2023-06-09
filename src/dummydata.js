@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1686161130801,
-    title: "The Super Cool Dream Factory",
+    title: "This sentence is precisely fifty characters.",
     calendarDate: "2023-06-15",
     displayDate: "06.15.2023",
     description: "Last night I was transported into a wonderland, a super cool dream factory. It was an entire universe crafted from imagination, where wild fantasies took physical form. I walked through fields of luminescent flowers, their petals gently rustling in the breeze of creativity. Glittering streams flowed with an endless supply of ideas, and mountains towered, studded with gems of innovation. The air was saturated with an invigorating energy, one that sparked inspiration and fired up my mind's engine. It was a place where dreams were born, nurtured, and sent to the corners of the waking world.Description for Object 1",

@@ -12,7 +12,7 @@ const Journal = ({ journalEntries }) => {
       return entries.map(entry => <JournalEntryCard key={entry.id} entry={entry} />)
     }
 
-    return <p>No Entries Found</p>
+    return <p className="no-entry">No Entries Found</p>
   }
 
   return (

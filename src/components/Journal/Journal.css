@@ -13,6 +13,14 @@
   gap: 10px;
 }
 
+.no-entry{
+  background-color:rgba(19, 60, 81, 0.75);
+  padding: 5px 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 40em) {
   .journal-cards {
     grid-template-columns: repeat(2, 1fr);
