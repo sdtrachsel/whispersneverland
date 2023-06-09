@@ -1,5 +1,5 @@
 import React from "react";
-import "./LandingPage.css"
+import "./LandingPage.css";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const LandingPage = () => {
@@ -22,7 +22,7 @@ const LandingPage = () => {
           </p>
         </div>
         <Link data-cy="link-newentry-btn" className="new-entry-btn-wrapper" to="/newentry">
-          <button data-cy="newentry-btn"className="standard-btn">Start a New Entry</button>
+          <button data-cy="newentry-btn" className="standard-btn">Start a New Entry</button>
         </Link>
       </div>
     </main >

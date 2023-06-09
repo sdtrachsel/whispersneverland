@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import "./JournalEntry.css"
+import React, { useState } from 'react';
+import "./JournalEntry.css";
 import { Redirect } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const JournalEntry = ({ entryId, journalEntries }) => {
   const [redirectToForm, setRedirectToForm] = useState(false);
-  const selectedEntry = journalEntries.find(entry => Number(entryId) === entry.id)
+  const selectedEntry = journalEntries.find(entry => Number(entryId) === entry.id);
 
   const imageSrc = () => {
     if (selectedEntry.image.default) {
-      return selectedEntry.image.urls.regular
+      return selectedEntry.image.urls.regular;
     }
-    return selectedEntry.image.urls.raw
+    return selectedEntry.image.urls.raw;
   }
 
   const addImage = () => {
@@ -53,5 +54,10 @@ const JournalEntry = ({ entryId, journalEntries }) => {
     </section>
   )
 }
+
+JournalEntry.propTypes = {
+  entryId: PropTypes.number.isRequired,
+  journalEntries: PropTypes.arrayOf(PropTypes.object).isRequired
+};
 
 export default JournalEntry;

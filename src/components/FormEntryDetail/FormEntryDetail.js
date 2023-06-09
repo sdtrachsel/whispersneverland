@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import './FormEntryDetail.css'
+import React, { useState } from 'react';
+import './FormEntryDetail.css';
+import PropTypes from "prop-types";
 
 const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionComplete }) => {
   const [title, setTitle] = useState("")
@@ -37,7 +38,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
   }
 
   const handleSave = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     setTitleError(false);
     setDateError(false);
     setDescriptionError(false);
@@ -47,7 +48,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
     if (!description) setDescriptionError(true);
 
     if (title && date && description) {
-      let newEntry = createJournalEntry()
+      let newEntry = createJournalEntry();
       setJournalEntries((prevEntries) => {
         let updatedEntries = [...prevEntries, newEntry]
         return updatedEntries.sort((a, b) => new Date(b.calendarDate) - new Date(a.calendarDate))
@@ -62,7 +63,6 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
       setDescriptionError(false)
     }
   }
-
 
   return (
     <section className="entry-descrip-wrapper">
@@ -107,5 +107,11 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
     </section>
   )
 }
+
+FormEntryDetail.propTypes = {
+  setCurrentEntryId: PropTypes.func.isRequired,
+  setJournalEntries: PropTypes.func.isRequired,
+  setDescriptionComplete: PropTypes.func.isRequired
+};
 
 export default FormEntryDetail;
