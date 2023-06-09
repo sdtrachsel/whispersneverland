@@ -11,7 +11,7 @@ import Error from '../Error/Error';
 import data from '../../dummydata'
 
 const App = () => {
-  const [journalEntries, setJournalEntries] = useState(data)
+  const [journalEntries, setJournalEntries] = useState([])
   const location = useLocation();
   const currentEntryId = location.state?.currentEntryId;
 
