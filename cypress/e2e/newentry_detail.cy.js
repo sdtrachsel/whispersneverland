@@ -1,4 +1,4 @@
-describe('New Journal Entry', () => {
+describe('New Journal Entry Detail', () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000/")
     .get('[data-cy="newentry-btn"]').click()
