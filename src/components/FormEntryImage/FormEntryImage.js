@@ -79,7 +79,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
   })
 
   return (
-    <div className="img-entry-wrapper">
+    <section className="img-entry-wrapper">
       <h1 className="entry-header">Select your Image</h1>
       <form className="search-form">
         <div className="search-wrapper">
@@ -100,7 +100,7 @@ const FormEntryImage = ({ currentEntryId, journalEntries, setJournalEntries }) =
         </div>
           <button className="standard-btn img-save-btn" onClick={(event) => { handleSave(event) }} disabled={!selectedImage.id}>Save</button>
       </form>
-    </div>
+    </section>
   )
 }
 

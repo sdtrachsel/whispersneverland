@@ -3,27 +3,25 @@
 }
 
 .search-wrapper{
-  margin-top: 1em;
   display: flex;
   align-items: center;
 }
 
 .search-form{
-  height: 86.5%;
+  height: 84%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .result-wrapper{
-  border: white solid 1px;
   height: 75%;
+  margin: 10px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   align-items: center;
   justify-items: center;
-  gap: 1vh;
 }
 
 .result-image{
@@ -76,8 +74,7 @@ input[type=radio] + .result-image {
 }
 
 input[type=radio]:checked + .result-image {
-  border: #2B9BA6 2px solid;
-  outline: #2B9BA6 5px solid;
+  border: #f0b72f 2px solid;
 }
 
 @media screen and (max-width: 40em) {

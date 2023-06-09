@@ -5,19 +5,16 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
   const [title, setTitle] = useState("")
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
+  const [titleError, setTitleError] = useState(false)
+  const [dateError, setDateError] = useState(false)
+  const [descriptionError, setDescriptionError] = useState(false)
 
   const formattedDate = () => {
     const [year, month, day] = date.split("-");
     return `${month}.${day}.${year}`;
   }
 
-  const calendarDate = () => {
-    const [year, month, day] = date.split('-');
-    return new Date(Date.UTC(year, month - 1, day))
-  }
-
   const createJournalEntry = () => {
-
     let newEntry = {
       id: Date.now(),
       title: title,
@@ -41,17 +38,28 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
 
   const handleSave = (event) => {
     event.preventDefault()
-    let newEntry = createJournalEntry()
-    setJournalEntries((prevEntries) => {
-      let updatedEntries = [...prevEntries, newEntry]
-      return updatedEntries.sort((a, b) => b.calendarDate - a.calendarDate)
-    })
-    setCurrentEntryId(newEntry.id)
-    setTitle("")
-    setDate("")
-    setDescription("")
-    setDescriptionComplete(true)
+
+    if (!title) setTitleError(true);
+    if (!date) setDateError(true);
+    if (!description) setDescriptionError(true);
+
+    if (title && date && description) {
+      let newEntry = createJournalEntry()
+      setJournalEntries((prevEntries) => {
+        let updatedEntries = [...prevEntries, newEntry]
+        return updatedEntries.sort((a, b) => new Date(b.calendarDate) - new Date(a.calendarDate))
+      })
+      setCurrentEntryId(newEntry.id)
+      setTitle("")
+      setDate("")
+      setDescription("")
+      setDescriptionComplete(true)
+      setTitleError(false)
+      setDateError(false)
+      setDescriptionError(false)
+    }
   }
+
 
   return (
     <section className="entry-descrip-wrapper">
@@ -61,7 +69,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
         <div className="title-wrapper">
           <label htmlFor="title-input">Dream Title:</label>
           <input
-            className="title-input"
+            className={`title-input ${titleError ? 'error' : ''}`}
             id="title-input"
             type="text"
             value={title}
@@ -72,6 +80,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
         <div className="date-wrapper">
           <label htmlFor="date-input">Date:</label>
           <input
+            className={`date-input ${dateError ? 'error' : ''}`}
             id="date-input"
             type="date"
             value={date}
@@ -80,8 +89,8 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
         <div className="descript-wrapper">
           <label htmlFor="desciption-input">Description:</label>
           <textarea
+            className={`descript-input ${descriptionError ? 'error' : ''}`}
             id="description-input"
-            className="descript-input"
             value={description}
             onChange={(event) => setDescription(event.target.value)} />
         </div>
@@ -89,7 +98,6 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
           <input
             className="standard-btn"
             type="submit"
-            disabled={!(title && date && description)}
             value={"Save"} />
         </div>
       </form>

@@ -8,7 +8,7 @@ const JournalEntryCard = ({ entry }) => {
     if (entry.image.default) {
       return entry.image.urls.regular
     }
-    return entry.image.urls.raw + "&h=550&dpr=2"
+    return entry.image.urls.raw + "&h=175&dpr=2"
   }
 
   const entryTitle = () => {

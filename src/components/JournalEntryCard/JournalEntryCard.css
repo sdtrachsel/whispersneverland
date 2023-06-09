@@ -10,9 +10,10 @@
 }
 
 .card-img{
-  width: 60%;
+  height: 175px;
   flex-shrink: 0;
   opacity: .35;
+  overflow: hidden;
  }
 
 .overlay-title {
