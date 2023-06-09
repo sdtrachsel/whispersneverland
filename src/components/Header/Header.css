@@ -1,19 +1,46 @@
 header {
-  display: flex;
-  justify-content: space-between;
   height: 13vh;
   width: 100vw;
   padding: 2vh;
-}
-
-nav{
-  height: 100%;
-  margin-right: 1vw;
-  width: 20%;
   display: flex;
   justify-content: space-between;
 }
 
-.nav-link{
-  color: white;
+nav {
+  height: 100%;
+  width: 15%;
+  margin-right: 1vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.nav-link {
+  border-bottom: #f0b72f 1px solid;
+  color: #f0b72f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link.unselected {
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 60em) {
+  nav {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  nav {
+    width: 30%;
+  }
+}
+
+  @media screen and (max-width: 31em) {
+    nav {
+      width: 40%;
+    }
 }

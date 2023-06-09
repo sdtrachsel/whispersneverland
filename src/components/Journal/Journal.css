@@ -1,0 +1,34 @@
+.filter-container {
+  display: flex;
+  justify-content: center;
+}
+
+.journal-cards {
+  margin: 2vh 0vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.no-entry{
+  background-color:rgba(19, 60, 81, 0.75);
+  padding: 5px 10px;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 40em) {
+  .journal-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 32em) {
+  .journal-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

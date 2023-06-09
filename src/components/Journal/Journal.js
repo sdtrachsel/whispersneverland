@@ -12,15 +12,17 @@ const Journal = ({ journalEntries }) => {
       return entries.map(entry => <JournalEntryCard key={entry.id} entry={entry} />)
     }
 
-    return <p>No Entries Found</p>
+    return <p className="no-entry">No Entries Found</p>
   }
 
   return (
     <section>
+      <div className="filter-container"> 
       <JournalFilter
         journalEntries={journalEntries}
         setIsFiltered={setIsFiltered}
         setFilteredEntries={setFilteredEntries} />
+       </div> 
       <div className="journal-cards">
         {isFiltered ?
           createEntryCards(filteredEntries) :

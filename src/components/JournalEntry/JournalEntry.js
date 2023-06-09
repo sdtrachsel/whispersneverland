@@ -18,37 +18,39 @@ const JournalEntry = ({ entryId, journalEntries }) => {
   };
 
   if (redirectToForm) {
-    return <Redirect to={{ 
-      pathname: "/newentry", 
-      state: { 
+    return <Redirect to={{
+      pathname: "/newentry",
+      state: {
         currentEntryId: selectedEntry.id,
         descriptionComplete: true,
-       } 
-      }} />
+      }
+    }} />
   }
 
   const renderContent = () => {
-    // if (!selectedEntry) {
-    //   return <p>loading</p>
-    // }
-
     return (
-      <>
-        <img src={imageSrc()} alt={selectedEntry.image.urls.altText} />
-        <h1>{selectedEntry.title}</h1>
-        {selectedEntry && selectedEntry.image.default &&
-          <button onClick={addImage}>Add Image</button>
-        }
-        <p>Date: {selectedEntry.displayDate}</p>
-        <p>{selectedEntry.description}</p>
-      </>
+      <div className="single-wrapper">
+        <div className="single-top-container">
+          <div className="top-lft-wrapper">
+            <img className="single-img" src={imageSrc()} alt={selectedEntry.image.urls.altText} />
+            {selectedEntry && selectedEntry.image.default &&
+              <button className="add-img-btn" onClick={addImage}>Add Image</button>
+            }
+          </div>
+          <div className="top-rt-wrapper">
+            <p className="single-date">Date: {selectedEntry.displayDate}</p>
+            <h1 className="single-title">{selectedEntry.title}</h1>
+          </div>
+        </div>
+        <p className="single-desc">{selectedEntry.description}</p>
+      </div>
     )
   }
 
   return (
-    <div>
+    <section className="single-container">
       {renderContent()}
-    </div>
+    </section>
   )
 }
 

@@ -1,0 +1,23 @@
+.error-container{
+  height: 87vh;
+  width: 99VW;
+  display: flex;
+  justify-content: center;
+}
+
+.error-wrapper{
+  height: 90%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(19, 60, 81, 0.85);
+}
+
+.error-text{
+  font-size: 2rem;
+  color:#f0b72f;
+  text-align: left;
+  width: 60%;
+}
