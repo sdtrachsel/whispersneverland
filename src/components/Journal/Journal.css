@@ -4,7 +4,7 @@
 }
 
 .journal-cards {
-  margin: 2vh 0vh;
+  margin: 20px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;

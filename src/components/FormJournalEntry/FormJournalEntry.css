@@ -16,25 +16,25 @@
 .entry-header{
   font-family: 'Great Vibes', cursive;
   color: #f0b72f;
-  font-size: 3rem;
+  font-size: 4.5rem;
   text-align: center;
 }
 
 .entry-sub-header{
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
 }
 
 .title-wrapper,
 .date-wrapper{
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
 }
 
 .descript-wrapper{
   display: flex;
   flex-direction: column;
-  margin-bottom: 4vh;
+  margin-bottom: 50px;
 }
 
 .descript-input{
@@ -43,10 +43,12 @@
 
 input{
   font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
 }
 
 label{
-  margin-right: 1vh;
+  margin-right: 10px;
+  font-size: 1.25rem;;
 }
 
 input[type="date"]:hover{
@@ -56,6 +58,7 @@ input[type="date"]:hover{
 textarea,
 input{
   color: black;
+  font-size: 1rem;
 }
 
 .title-input{

@@ -25,7 +25,7 @@
 }
 
 .result-image{
-  height:120px;
+  height:175px;
 }
 
 .img-save-btn{
@@ -33,6 +33,7 @@
 }
 
 .search-btn{
+  font-size: .75rem;
   width: 10%;
   min-width: fit-content;
   min-height: fit-content;
