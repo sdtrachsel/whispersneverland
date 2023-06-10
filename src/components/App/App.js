@@ -8,17 +8,15 @@ import Journal from '../Journal/Journal';
 import JournalEntry from '../JournalEntry/JournalEntry';
 import Error from '../Error/Error';
 
-import data from '../../dummydata'
-
 const App = () => {
-  const [journalEntries, setJournalEntries] = useState(data)
+  const [journalEntries, setJournalEntries] = useState([])
 
   const location = useLocation();
   const currentEntryId = location.state?.currentEntryId;
 
   const renderJournalEntryOrError = ({ match }) => {
-    const entryId = match.params.entryId;
-    const selectedEntry = journalEntries.find(entry => Number(entryId) === entry.id);
+    const entryId = Number(match.params.entryId);
+    const selectedEntry = journalEntries.find(entry => entryId === entry.id);
     if (selectedEntry) {
       return <JournalEntry entryId={entryId} journalEntries={journalEntries} />
     }

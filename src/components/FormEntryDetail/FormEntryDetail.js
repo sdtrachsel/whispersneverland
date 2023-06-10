@@ -90,7 +90,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
             onChange={(event) => setDate(event.target.value)} />
         </div>
         <div className="descript-wrapper">
-          <label htmlFor="desciption-input">Description:</label>
+          <label htmlFor="description-input">Description:</label>
           <textarea
             className={`descript-input ${descriptionError ? 'error' : ''}`}
             id="description-input"
