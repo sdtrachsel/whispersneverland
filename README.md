@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## About
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Whispers from Neverland, your personal gateway to the ethereal realm of dreams. This application is designed to help you record, recall, and interpret your dreams, thus bridging the gap between the conscious and unconscious mind. Whether you're seeking to unravel the mysteries of your night-time narratives or simply preserve these fleeting fantasies, Whispers from Neverland offers an intuitive and enjoyable journaling experience. Start your dream exploration today and dive deep into the magical world of Neverland.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Visit the site
+[Whispers from Neverland](https://whispersneverland.vercel.app/)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Contributors
+Sharie Tracshel  [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://www.linkedin.com/in/sharie-trachsel/)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Set Up 
+1. `Fork` and `clone` this repo
+1. `cd` into the file
+1. Run `npm install` and `npm start`
+1. Navigate to http://localhost:3000/
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Preview
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Context 
+Whispers from Neverland is a solo project showcase for the third part of the  [Turing School of Software & Design's Front End Development program](https://frontend.turing.edu/). 
+Students were challenged to create a MVP for a niche audience to showcase their skills and move on to the fourth and final part of the program. The application from start to completion was to be completed in 5 days utilizing:
+  * React 
+  * Test-Driven Development utilizing the Cypress framework
+  * URL customization and browser compatibility via Router 
+  * Network requests & API data 
+  * Git workflow
+  * 3rd party hosting - [Vercel](https://memedepot.vercel.app/)
+  * Project board - [GitHub Projects](https://github.com/users/sdtrachsel/projects/3/views/1)
+---
