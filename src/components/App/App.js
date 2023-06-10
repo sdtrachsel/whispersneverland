@@ -28,8 +28,8 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/newentry" render={() => <FormJournalEntry currentEntryId={currentEntryId} journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
-        <Route exact path="/journal" render={() => <Journal journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
+        <Route exact path="/newentry" render={() => <FormJournalEntry  journalEntries={journalEntries} setJournalEntries={setJournalEntries} />} />
+        <Route exact path="/journal" render={() => <Journal journalEntries={journalEntries} />} />
         <Route path="/:entryId" render={renderJournalEntryOrError} />
         <Route exact path='*' render={() => <Error />} />
       </Switch>
