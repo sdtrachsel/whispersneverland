@@ -25,8 +25,8 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
       image: {
         default: true,
         urls: {
-          altText: "Whispers From Neverland with moon",
-          regular: "https://i.imgur.com/6b9hrSL.png",
+          altText: "No image available",
+          regular: "https://i.imgur.com/QzYI8CH.jpg",
           small: "",
           thumb: "",
           raw: ""
@@ -90,7 +90,7 @@ const FormEntryDetail = ({ setCurrentEntryId, setJournalEntries, setDescriptionC
             onChange={(event) => setDate(event.target.value)} />
         </div>
         <div className="descript-wrapper">
-          <label htmlFor="desciption-input">Description:</label>
+          <label htmlFor="description-input">Description:</label>
           <textarea
             className={`descript-input ${descriptionError ? 'error' : ''}`}
             id="description-input"

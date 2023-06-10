@@ -48,7 +48,7 @@ describe('journal entry', () => {
       .get('input[type="submit"]').click()
       .get('[data-cy="link-journal"]').click()
       .get('.card-link').first().click()
-      .get('.single-img').should('have.attr', 'alt', 'Whispers From Neverland with moon')
+      .get('.single-img').should('have.attr', 'alt', 'No image available')
       .get('.add-img-btn').should('exist').click()
       .get('input[type="search"]').type('pickles')
       .get('.search-btn').click()
