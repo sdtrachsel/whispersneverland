@@ -22,10 +22,11 @@ body{
 }
 
 .standard-btn {
+  font-size: 1.5rem;
   width: 20%;
   min-width: fit-content;
   min-height: fit-content;
-  padding: .5em;
+  padding: 10px 5px;
   align-self: center;
   color: rgba(255, 255, 255, 0.85);
   font-weight: bold;

@@ -22,8 +22,10 @@ const JournalEntryCard = ({ entry }) => {
     <Link className="card-link" to={`/${entry.id}`}  >
       <div className="card-container">
         <img className="card-img" src={imageSource()} alt={entry.image.urls.altText} />
-        <div className="overlay-title">{entryTitle()}</div>
-        <div className="overlay-date">{entry.displayDate}</div>
+        <div className="card-side">
+          <div className="overlay-title">{entryTitle()}</div>
+          <div className="overlay-date">{entry.displayDate}</div>
+        </div>
       </div>
     </Link>
   )

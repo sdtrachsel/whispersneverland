@@ -6,7 +6,9 @@ main {
 }
 
 .landing-wrapper {
+  margin: 10px 0;
   height: 90%;
+  min-height: fit-content;
   width: 65%;
   display: flex;
   flex-direction: column;
@@ -23,7 +25,7 @@ main {
 
 .welcome {
   margin-left: 1.8em;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 600;
 }
 
@@ -33,7 +35,7 @@ main {
   text-align: center;
   color:#f0b72f;
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 .greeting-wrapper {
@@ -44,19 +46,18 @@ main {
 }
 
 .greeting-par{
-  font-size: .75rem;
-  line-height: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   text-align: center;
   margin-bottom: 1vh;
 }
 
 .greeting-bottom {
-  font-size: .75rem;
-  line-height: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   text-align: center;
   margin: 2vh 0;
   font-weight: 400;
-  font-size: .75rem;
 }
 
 .new-entry-btn-wrapper{
@@ -65,12 +66,23 @@ main {
   text-decoration: none;
 }
 
-@media screen and (max-width: 27em) {
+@media screen and (max-width: 43em) {
   .welcome {
     font-size: 1.5rem;
   }
   
   .dreamer {
     font-size: 4rem;
+  }
+
+  .landing-wrapper {
+    margin: 10px 0;
+    height: 90%;
+    min-height: fit-content;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(19, 60, 81, 0.85);
   }
 }

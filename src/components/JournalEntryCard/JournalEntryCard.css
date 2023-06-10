@@ -1,61 +1,83 @@
-.card-link{
+.card-link {
   width: 30vw;
+  text-decoration: none;
 }
 
-.card-container{
+.card-container {
   width: 100%;
   display: flex;
   position: relative;
-  background-color: white;
+  background-color: #133c51;
 }
 
-.card-img{
-  height: 175px;
+.card-side{
+  margin: 10px 10px 0 0;
+  width:100% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  height: 35vh;
   flex-shrink: 0;
-  opacity: .35;
+  opacity: .45;
   overflow: hidden;
- }
+}
 
 .overlay-title {
-  position: absolute;
-  width: 60%;
-  height: 45%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: #133c51;
-  font-size: 1rem;
+  width: 100%;
+  overflow-wrap: break-word;
+  font-size: 1.4rem;
   font-weight: 600;
-  left: 30%;
-  top: 20%;
+  text-align: right;
+  overflow: visible;
+}
+
+.overlay-date {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2rem;
   text-align: right;
 }
 
-.overlay-date{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 10px; 
-  color: #133c51;
-  font-size: .75rem; 
+@media screen and (max-width: 76em) {
+  .overlay-title {
+    font-size: 1.25rem;
+  }
 }
 
-@media screen and (max-width: 40em) {
-  .card-link{
+@media screen and (max-width: 73em) {
+  .card-link {
     width: 45vw;
   }
 
-  .overlay-title{
-    font-size: .75rem;
+  .card-img {
+    height: 35vh;
   }
 }
 
-@media screen and (max-width: 32em) {
-  .card-link{
-    width: 70vw;
+@media screen and (max-width: 53em) {
+  .overlay-title {
+    font-size: 1.25rem;
+  }
+  .card-img {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  .card-link {
+    width: 85vw;
   }
 
-  .overlay-title{
-    font-size: .75rem;
+  .card-img {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .card-link {
+    width: 85vw;
   }
 }
