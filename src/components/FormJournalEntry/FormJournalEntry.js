@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import './FormJournalEntry.css'
 import FormEntryDetail from '../FormEntryDetail/FormEntryDetail'
 import FormEntryImage from '../FormEntryImage/FormEntryImage'
+import PropTypes from 'prop-types';
 
 const FormJournalEntry = ({ journalEntries, setJournalEntries}) => {
   const [descriptionComplete, setDescriptionComplete] = useState(false)
