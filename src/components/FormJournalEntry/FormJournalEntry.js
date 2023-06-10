@@ -36,4 +36,9 @@ const FormJournalEntry = ({ journalEntries, setJournalEntries}) => {
   )
 }
 
+FormJournalEntry.propTypes = {
+  journalEntries: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setJournalEntries: PropTypes.func.isRequired,
+}
+
 export default FormJournalEntry;
