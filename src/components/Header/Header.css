@@ -6,6 +6,9 @@ header {
   justify-content: space-between;
 }
 
+.logo{
+  height: 70px;
+}
 nav {
   height: 100%;
   width: 20%;
