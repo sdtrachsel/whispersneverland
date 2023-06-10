@@ -2,6 +2,11 @@
 
 Welcome to Whispers from Neverland, your personal gateway to the ethereal realm of dreams. This application is designed to help you record, recall, and interpret your dreams, thus bridging the gap between the conscious and unconscious mind. Whether you're seeking to unravel the mysteries of your night-time narratives or simply preserve these fleeting fantasies, Whispers from Neverland offers an intuitive and enjoyable journaling experience. Start your dream exploration today and dive deep into the magical world of Neverland.
 
+Features:
+- Add a journal entry
+- Add a journal entry image (now or later)
+- Filter your journal entries by date.
+
 ---
 
 ## Visit the site
@@ -24,7 +29,6 @@ Sharie Tracshel  [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://ww
 ## Preview
 ![whispersfromdreamlandpreview](https://github.com/sdtrachsel/whispersneverland/assets/122052199/9f62a06e-df96-4365-bb45-0126e688ebed)
 
-
 ---
 
 ## Context 
@@ -33,7 +37,7 @@ Students were challenged to create a MVP for a niche audience to showcase their 
   * React 
   * Test-Driven Development utilizing the Cypress framework
   * URL customization and browser compatibility via Router 
-  * Network requests & API data 
+  * Network requests & API data - [Unsplash API](https://unsplash.com/developers)
   * Git workflow
   * 3rd party hosting - [Vercel](https://memedepot.vercel.app/)
   * Project board - [GitHub Projects](https://github.com/users/sdtrachsel/projects/3/views/1)
