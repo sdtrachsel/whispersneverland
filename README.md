@@ -22,6 +22,10 @@ Sharie Tracshel  [GitHub](https://github.com/sdtrachsel) | [LinkedIn](https://ww
 ---
 
 ## Preview
+![whispersfromdreamlandpreview](https://github.com/sdtrachsel/whispersneverland/assets/122052199/9f62a06e-df96-4365-bb45-0126e688ebed)
+
+
+---
 
 ## Context 
 Whispers from Neverland is a solo project showcase for the third part of the  [Turing School of Software & Design's Front End Development program](https://frontend.turing.edu/). 
